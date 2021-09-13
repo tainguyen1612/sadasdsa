@@ -1,0 +1,33 @@
+extend ../layouts/layout
+
+block vars
+	-title="Liên Hệ"
+
+block content
+	+navigate(contactNagi)
+	section.contactmap
+		.container.section__contain
+			.row
+				.col-12
+					h1.login__head LIÊN HỆ
+				.col-lg-6.col-md-12
+					iframe(src='https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d15336.693649597444!2d108.17845704999999!3d16.05648855!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1svi!2s!4v1627746953814!5m2!1svi!2s' width='100%' height='100%' style='border:0;' allowfullscreen='' loading='lazy')
+				.col-lg-6.col-md-12.p-lg-0.pt-3
+					form.contact__form.text-start.pt-0
+						.mb-4
+							h2.form__head.mt-0.pt-0 GỬI EMAIL CHO CHÚNG TÔI
+						.mb-3.row
+							label.form-label.col-2 Tên &#42;
+							.col-10
+								input.form-control(type='email' aria-describedby='firstName')
+						.mb-3.row
+							label.form-label.col-2 Email &#42;
+							.col-10
+								input.form-control(type='email' aria-describedby='lastName')
+						.mb-3.row
+							label.form-label.col-2 Tin nhắn &#42;
+							.col-10
+								textarea.form-control(type='text' aria-describedby='emailHelp' rows="5")
+						.mb-3.text-end
+							a(href="#").btn.btn-dark.px-3 GỬI
+							

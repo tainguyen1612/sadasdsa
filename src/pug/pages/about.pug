@@ -1,0 +1,19 @@
+extend ../layouts/layout
+
+block vars
+	-title="Về chúng tôi"
+
+block content
+	+navigate(aboutNagi)
+	section.about
+		.container.section__contain
+			.row
+				.col-12
+					h1.login__head VỀ CHÚNG TÔI
+				.col-lg-5.col-12
+					img(src="images/1_About-Us.jpg" height="100%" alt="about us")
+				.col-lg-7.col-12.mt-lg-0.mt-md-4
+					img(src="images/logo.png" alt="logo")
+					h2.about__head GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA
+					p.about__text= contact[0].content
+					a(href="#") Xem thêm

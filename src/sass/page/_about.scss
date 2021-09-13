@@ -1,0 +1,24 @@
+.about {
+    padding-bottom: 50px;
+    
+    &__head {
+        @include font(1rem,$fontDetault,550);
+        margin-top: 25px;
+    }
+
+    &__text {
+        font-size: 0.8rem;
+        color: $colorListItem;
+        line-height: 20px;
+        margin: 15px 0;
+    }
+
+    a {
+        font-size: 0.8rem;
+        color: $colorText;
+
+        &:hover {
+            color: $colorGreen;
+        }
+    }
+}

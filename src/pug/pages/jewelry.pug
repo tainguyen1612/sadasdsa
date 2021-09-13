@@ -1,0 +1,87 @@
+extend ../layouts/layout
+
+block vars
+	-title = 'Jewerly'
+
+block content
+	+navigate(navigaListItem)
+	section.bgbanner.d-none.d-lg-block
+		.container
+			.row.bgbanner__contain
+				.col-md-8.bgbanner__head
+					h1 Giảm giá 50%
+					p
+						| Trong vòng 3 ngày
+						br
+						span (25/5 - 28/5/2015)
+				.col-md-4.bgbanner__img
+	section.list
+		.container.section__contain
+			.row
+				.col-lg-3.col-12.list__nav
+					h1.list__nav__head
+						i.fa.fa-bars
+						| &emsp;DANH MỤC SẢN PHẨM
+					#accordionFlushExample.accordion.accordion-flush
+						.accordion-item
+							h2#flush-headingOne.accordion-header
+								button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseOne' aria-expanded='false' aria-controls='flush-collapseOne')= dataCategory1[0]
+							#flush-collapseOne.accordion-collapse.collapse(aria-labelledby='flush-headingOne' data-bs-parent='#accordionFlushExample')
+								ul.accordion-body
+									each n,i in dataCategory1
+										if i > 0
+											li= n
+						.accordion-item
+							h2#flush-headingTwo.accordion-header
+								button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseTwo' aria-expanded='false' aria-controls='flush-collapseTwo')= dataCategory2[0]
+							#flush-collapseTwo.accordion-collapse.collapse(aria-labelledby='flush-headingTwo' data-bs-parent='#accordionFlushExample')
+								ul.accordion-body
+									each n,i in dataCategory2
+										if i > 0
+											li= n
+						.accordion-item
+							h2#flush-headingThree.accordion-header
+								button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseThree' aria-expanded='false' aria-controls='flush-collapseThree')= dataCategory3[0]
+							#flush-collapseThree.accordion-collapse.collapse(aria-labelledby='flush-headingThree' data-bs-parent='#accordionFlushExample')
+								ul.accordion-body
+									each n,i in dataCategory3
+											if i > 0
+												li= n
+						.accordion-item
+							h2#flush-headingFour.accordion-header
+								button.accordion-button.collapsed(type='button' data-bs-toggle='collapse' data-bs-target='#flush-collapseFour' aria-expanded='false' aria-controls='flush-collapseThree')= dataCategory4[0]
+							#flush-collapseFour.accordion-collapse.collapse(aria-labelledby='flush-headingFour' data-bs-parent='#accordionFlushExample')
+								ul.accordion-body
+									each n,i in dataCategory4
+											if i > 0
+												li= n
+					.list__nav__product
+						h1.list__nav__head
+							| SO SÁNH SẢN PHẨM
+						h4 Bạn chưa có sản phẩm để so sánh
+					.list__nav__product
+						h1.list__nav__head
+							| TAG SẢN PHẨM
+						br
+						each item in tagProduct
+							a(href="#").btn.btn-light= item
+					.list__nav__img.d-none.d-lg-block
+						img(src="images/1_Gird.jpg", alt="grid image")
+						h2 MANLADA
+							br
+							| STORE
+				.col-lg-9.col-12
+					input#grid(type="radio", name="check" checked).d-none
+					input#list(type="radio", name="check").d-none
+					+pagination()
+					#listGrid
+						//- +loop(2)
+						.row.list__row
+						//- 		+responsiveCard("normal")
+						//- 		+responsiveCard("medium")
+					
+					#listList.d-none.mt-4
+						+loop(3)
+							+listCard()
+					//- +pagination()
+					

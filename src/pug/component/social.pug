@@ -1,0 +1,33 @@
+mixin socailItem(size)
+    case size
+        when "normal"
+            each item in iconSocial	
+                .col-2.d-none.d-lg-block
+                    .social__icon
+                        i(class=item.icon)
+                        p= item.name
+        when "medium"
+            each item,i in iconSocial	
+                .col-2.d-none.d-md-block.d-lg-none
+                    .social__icon
+                        i(class=item.icon)
+                        p= item.name
+                if i == 4
+                    - break
+        when "small"
+            each item,i in iconSocial
+                .col-3.d-none.d-sm-block.d-md-none
+                    .social__icon
+                        i(class=item.icon)
+                        p= item.name
+                if i == 3
+                    - break
+        when "xs"
+            each item,i in iconSocial
+                .col-6.d-block.d-sm-none
+                    .social__icon
+                        i(class=item.icon)
+                        p= item.name
+                if i == 1
+                    - break
+                    

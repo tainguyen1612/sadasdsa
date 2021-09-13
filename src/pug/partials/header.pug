@@ -1,0 +1,25 @@
+header.header-nav
+	nav.navbar.navbar-expand-lg.navbar-light
+		.container
+			a.navbar-brand(href='/index.html')
+				img(src="images/logo.png", alt="manlada logo")
+			ul.d-flex.ms-auto.order-lg-2.order-md-1
+				li.icon__header.dropdown
+					a.dropdown-toggle(href="/cart.html" role='button' data-bs-toggle='dropdown' aria-expanded='false')
+						i.fa.fa-shopping-cart
+							span
+					.dropdown-menu.dropdown__cart
+						ul
+							//- +listCart("images/cart-avatar.jpg","Áo sơ mi nam","120.000$")
+							//- +listCart("images/cart-avatar.jpg","Áo sơ mi nam","120.000$")
+						.dropdown__cart-total.d-none
+							h1 Tổng số
+								span#totalPrice đ
+							a(href="/cart.html").btn.btn-dark GIỎ HÀNG
+				li.icon__header
+					a(href="/login.html").fa.fa-search
+			button.navbar-toggler.order-md-2(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+				span.navbar-toggler-icon
+			#navbarSupportedContent.collapse.navbar-collapse.justify-content-center.order-lg-1.order-md-3
+				ul.navbar-nav.mb-2.mb-lg-0
+					+listHeader()

@@ -1,0 +1,21 @@
+mixin navTab(nav,type)
+	ul#pills-tab.nav.nav-pills.mb-3(role='tablist')(class = type =="content" ? "nav-pills__edit" : null)
+		each item in nav
+			li.nav-item(role='presentation')
+				button(id=item.id class= item.id=="sub-nav-1" ? "active" : "" data-bs-toggle='pill' data-bs-target="#"+item.content type='button' role='tab' aria-controls=item.content aria-selected="true").nav-link= item.name
+	#pills-tabContent.tab-content
+		each n in nav
+				.tab-pane.fade( class= n.content=="nav-content-1" ? "active show" : "" id=n.content role="tabpanel" aria-labelledby=n.id)
+					if type == "carousel"
+						+navTabItem()
+					if type == "content"
+						+navTabContent()
+
+mixin navTabContent
+	each item in contentTab
+		article.info__tab
+				.info__tab__content
+					h4= item.head
+					p= item.content
+				.info__tab__image
+					img(src= item.urlImg, alt="content image")

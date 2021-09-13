@@ -1,0 +1,180 @@
+.bgbanner {
+    background-color: $colorbg;
+
+    &__contain {
+        width: 90%;
+        margin: auto;
+        padding: 0;
+        height: 120px;
+    }
+
+    &__img {
+        @include background(70%,top 30% right 100%,no-repeat);
+        background-image: url(../images/04_Grid.png);
+    }
+
+    &__head {
+        display: flex;
+        align-items: center;
+        color: $whiteColor;
+
+        h1 {
+            @include font(3.5vw,$fontLobster,300);
+            margin: 0 20px 0 50px;
+        }
+
+        p {
+            @include font(1.5vw,$fontDetault,100);
+            line-height: 30px;
+
+            span {
+                font-weight: 300;
+                font-size: 1.3rem;
+            }
+        }
+    }
+}
+
+.list {
+    padding: 50px 0;
+    // responsive
+    @include breakpoint-down("medium") {
+        padding-top: 10px;
+    }
+
+    &__contain {
+        width: 80%;
+        // responsive
+        @include breakpoint-down("xs") {
+            width: 100%;
+        }
+    }
+
+    &__nav {
+        &__head {
+            @include font(0.8rem,$fontDetault,bold);
+            color: $blackColor;
+            border-bottom: 1px solid $corlorCorder;
+            padding-bottom: 10px;
+        }
+
+        &__product {
+            h4 {
+                @include font(0.8rem,$fontDetault,300);
+                padding: 15px 0;
+                margin-bottom: 20px;
+                color: $colorText;
+            }
+
+            a{
+                margin: 3px 10px 10px 0;
+                color: $colorText;
+                border-color: $corlorCorder;
+
+                &:hover {
+                    background-color: $blackColor;
+                    color: $whiteColor;
+                }
+            }
+        }
+
+        &__img {
+            margin-top: 50px;
+            position: relative;
+
+            h2 {
+                @include centerPosition("both");
+                @include font(2vw,$fontItalic,100);
+                color: $whiteColor;
+                text-align: center;
+            }
+        }
+    }
+
+    &__type {
+        @include flex(space-between);
+        border-bottom: 1px solid $bottomHeader;
+
+        &__icon {
+            i {
+                margin-right: 10px;
+                cursor: pointer;
+            }
+        }
+
+        &__pagina {
+            .page-link {
+                padding: 3px 5px;
+                box-shadow: none;
+            }
+
+            a {
+                color: $colorText;
+                border: none;
+
+                &:hover {
+                    color: $blackColor;
+                }
+            }
+        }
+    }
+
+    &__row {
+        .card {
+            cursor: pointer;
+            height: 28.5vw;
+            border: none;
+
+            @include breakpoint-down("medium") {
+                height: auto;
+                &:hover > .card-footer {
+                    display: none;
+                }
+            }
+
+            &-body {
+                padding: 10px;
+                line-height: 5px;
+                flex: unset;
+                font-weight: 500;
+            }
+
+            &-text {
+                span {
+                    font-family: $fontLobster;
+                }
+            }
+            
+            &-footer {
+                padding: 2px;
+                a {
+                    font-size: 1vw;
+                }
+            }
+        }
+    }
+}
+
+#grid {
+    &:checked ~ .list__type > .list__type__icon > .list__type__check1 {
+        color: $colorGreen;
+    }
+
+    &:checked ~ #listGrid {
+        display: block !important;
+    }
+}
+
+#list {
+    &:checked ~ .list__type > .list__type__icon > .list__type__check2 {
+        color: $colorGreen;
+    }
+
+    &:checked ~ #listList {
+        display: block !important;
+    }
+
+    &:checked ~ #listGrid {
+        display: none !important;
+    }
+}

@@ -1,0 +1,224 @@
+-
+    const dataHeader = [
+        { 
+            name:"TRANG CHỦ",
+            url: "/home"
+        }, 
+
+        {
+            name: "GIỚI THIỆU",
+            url: "/about.html"
+        },
+        
+        {
+            name: "SẢN PHẨM",
+            url: "/product"
+        }, 
+        
+        {
+            name: "TIN TỨC",
+            url: "/blog.html"
+        }, 
+        
+        {
+            name:"BẢN ĐỒ",
+            url: "/notFound.html"
+        }, 
+        
+        {
+            name: "LIÊN HỆ",
+            url: "/contact.html"
+        }
+    ];
+
+    const headerSub1 = [{name:"DƯỠNG DA", url: "/skin"}, "Áo khoác", "Bộ áo liền quần", "Dresses","Quần/Váy","Quần short","Quần jean","Đồ đan","Áo nỉ"]
+
+    const headerSub2 = [{name:"NƯỚC HOA", url: "/perfume"},"Áo cánh/Áo sơ mi", "Túi xách & Balô", "Khăn quàng cổ và Foudards", "Dệt kim Hats & Gloves", "Vớ & Socks", "Jewerly", "Bị bảo vệ", "Giày"]
+
+    const headerSub3 = [{name:"TRANG SỨC", url: "/jewelry.html"},"Áo cánh/Áo sơ mi", "Túi xách & Balô", "Khăn quàng cổ và Foudards", "Dệt kim Hats & Gloves", "Vớ & Socks", "Jewerly", "Bị bảo vệ", "Giày"]
+
+    const promotionItem = [
+        {
+            icon: "fa fa-plane",
+            desc: "Miễn phí vận chuyển trên toàn quốc"
+        },
+        {
+            icon: "fa fa-gift",
+            desc: " Nhận ngay quà tặng  trị giá 350.000đ"
+        },
+        {
+            icon: "fa fa-star",
+            desc: "Giảm 30% cho đơn hàng  trên 5.000.000đ"
+        }
+    ]
+
+    const navTabCategory= ["Sản phẩm mới","Sản phẩm bán chạy","Sản phẩm đặc biệt"];
+
+    const navTabSubCate= [
+        {
+            id: "sub-nav-1",
+            name:"Mỹ phẩm",
+            content: "nav-content-1",
+        },
+
+        {
+            id: "sub-nav-2",
+            name:"Chăm sóc da",
+            content: "nav-content-2",
+        },
+
+        {
+            id: "sub-nav-3",
+            name:"Dành cho tóc",
+            content: "nav-content-3",
+        },
+
+        {
+            id: "sub-nav-4",
+            name: "Nước hoa",
+            content: "nav-content-4",
+        },
+
+        {
+            id: "sub-nav-5",
+            name:"Trang sức",
+            content: "nav-content-5",
+        },
+
+        {
+            id: "sub-nav-6",
+            name:"Quà tặng",
+            content: "nav-content-6",
+        }
+    ]
+
+    const navTabItem = [
+        {
+            img: "images/Home17.jpg",
+            name: "TIFFANY",
+            type: "Mỹ phẩm châu Âu",
+            price: "355.000đ"
+        },
+        
+        {
+            img: "images/Home16.jpg",
+            name: "OHUI",
+            type: "Mỹ phẩm châu Âu",
+            price: "355.000đ"
+        },
+
+        {
+            img: "images/Home18.jpg",
+            name: "HOME",
+            type: "Mỹ phẩm châu Âu",
+            price: "355.000đ"
+        },
+
+        {
+            img: "images/Home19.jpg",
+            name: "DEBORA",
+            type: "Mỹ phẩm châu Âu",
+            price: "355.000đ"
+        },
+
+        {
+            img: "images/Home20.jpg",
+            name: "SARVON",
+            type: "Mỹ phẩm châu Âu",
+            price: "355.000đ"
+        },
+
+        {
+            img: "images/Home21.jpg",
+            name: "TIFFANY",
+            type: "Mỹ phẩm châu Âu",
+            price: "355.000đ"
+        },
+    ]
+
+    const navTabItemRes = [
+        {
+            img: "images/Home-product-md1.jpg",
+            name: "TIFFANY",
+            type: "Mỹ phẩm châu Âu",
+            price: "355.000đ"
+        },
+        
+        {
+            img: "images/Home-product-md2.jpg",
+            name: "TIFFANY",
+            type: "Mỹ phẩm châu Âu",
+            price: "355.000đ"
+        }
+    ]
+
+    const iconSocial =[
+        {
+            icon: "fab fa-facebook-f",
+            name: "FACEBOOK"
+        },
+
+        {
+            icon: "fab fa-twitter",
+            name: "TWITTER"
+        },
+
+        {
+            icon: "fab fa-instagram",
+            name: "INSTAGRAM"
+        },
+
+        {
+            icon: "fab fa-google",
+            name: "GOOGLE"
+        },
+
+        {
+            icon: "fab fa-pinterest",
+            name: "PRINTEREST"
+        },
+
+        {
+            icon: "fab fa-linkedin",
+            name: "LINKEDIN"
+        },
+    ]
+
+    const contact = [
+        {
+            title: "VỀ CHÚNG TÔI",
+            head: "GIỚI THIỆU CHUNG VỀ MỸ PHẨM HANDMADE MANDALA",
+            content: "Hi, chào các nàng ... sau khá nhiều lời hứa hảo thì hôm nay tới quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt, Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt.sau khá nhiều lời hứa hão thì hôm nay tớ quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt."
+        },
+
+        {
+            title: "BLOG",
+            head: "REVIEW SON KEM BOURJOIS VELVET",
+            content: "Hi, chào các nàng ... sau khá nhiều lời hứa hão thì hôm nay tới quay lại hâm nóng cái Blog này vào một ngày đầu hè nóng oi bức, khi mà dân tình xô nhau đi tắm Free để giải nhiệt."
+        },
+
+        {
+            title: "GỬI EMAIL CHO CHÚNG TÔI",
+            content: "Gửi email để nhận những ưu đãi mới nhất"
+        },
+
+        {
+            head: "TAG SẢN PHẨM",
+        }
+    ];
+
+    const contactItem = ["Đồng hồ", "Túi Phụ kiện", "Đồng hồ", "Túi Giày Sandal", "Áo sơ mi", "Nước hoa", "Giày", "Trẻ em", "Thời trang nữ", "Trẻ em", "Thời trang nữ", "Sandal"]
+
+    const dataFooter ={
+        contact: {"fa fa-map-marker":"Tầng 4 Tòa nhà Hanoi Group Số 442 Đội Cấn ,P Cống Vị, Q. Ba Đình, Hà Nội","fa fa-phone":"(04) 6674 2332","fa fa-phone-volume":"(04) 6674 2332","fas fa-phone":"(04) 3786 8904","fa fa-envelope":"(08) 6680 9686","fa fa-envelope":"Support@bizweb.vn"},
+        
+        shipping: ["mua sắm trực tuyến","Đến từ chúng tôi gửi đến","Chính sách vận chuyển","Vận chuyển thông tin"],
+        
+        support: ["Câu chuyện của chúng ta","Thanh toán an toàn","Tùy chọn Vận Chuyển","Chính sách vận chuyển"],
+        
+        info: ["về Chúng Tôi","Điều khoản & điều kiện","Chính Sách Riêng Tư","Đơn đặt hàng và Returns"],
+        
+        account: ["Xem Giỏ hàng","Sản phẩm yêu thích","kiểm tra","Theo dõi đặt hàng của tôi"]
+    }
+
+    const dataHeaderFooter = [ "LIÊN HỆ VỚI CHÚNG TÔI" , "CHUYỂN HÀNG", "HỖ TRỢ", "THÔNG TIN", "MY ACCOUNT"]

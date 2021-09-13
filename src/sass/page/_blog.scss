@@ -1,0 +1,112 @@
+.blog {
+    padding-bottom: 50px;
+}
+
+.blogdetail {
+    @extend .blog;
+
+    &__left {        
+        &__head {
+            @include font(1rem,$fontDetault,400);
+            padding-bottom: 15px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid $bottomHeader;
+        }
+
+        &__bold {
+            @extend .blogdetail__left__head;
+            margin-top: 50px;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        &__new {
+            @include flex(space-between,center);
+
+            &__img {
+                width: 45%;
+            }
+
+            &__content {
+                width: 50%;
+                line-height: 20px;
+
+                h4 {
+                    @include font(1.5rem,$fontDetault,bold);
+
+                    span {
+                        font-size: 0.8rem;
+                    }
+                }
+
+                p {
+                    color:  $colorText;
+                    font-weight: 300;
+                    font-size: 0.7rem;
+                    font-style: italic;
+                }
+            }
+        }
+
+        a {
+            color: $colorText;
+        }
+
+        &__video {
+            i {
+                @include centerPosition("both");
+                @include size(3.5vw);
+                background-color: $colorVideo;
+                line-height: 3.5vw;
+                text-align: center;
+                font-size: 1vw;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+        }
+    }
+
+    &__blog {
+        font-family: $fontDetault;
+
+        h3 {
+            @include font(1.3rem,$fontDetault,bold);
+            margin-top: 30px ;
+            padding-bottom: 15px;
+            border-bottom: 1px solid $bottomHeader;
+        }
+        
+        &__content {
+            @include font(1rem,$fontDetault,300);
+            text-align: justify;
+            color: $colorFooter;
+            line-height: 25px;
+            padding: 20px 0;
+        }
+        
+        h5 {
+            color: $colorText;
+            font-weight: 300;
+            font-style: italic;
+            padding-bottom: 10px;
+            border-bottom: 1px solid $bottomHeader;
+        }
+        
+        a {
+            color: $corlorCorder;
+            font-weight: 300;
+
+            span {
+                float: right;
+            }
+
+            &:hover {
+                color: $blackColor;
+
+                span {
+                    color: $corlorCorder;
+                }
+            }
+        }
+    }
+}

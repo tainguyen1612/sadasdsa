@@ -1,0 +1,72 @@
+.qoute__slide {
+    display: block !important;
+    width: fit-content !important;
+    margin: 0 !important;
+    left: 13% !important;
+    bottom: -10px !important;
+    // edit responsive
+    @include breakpoint-down("medium") {
+        left: 15.5% !important;
+    }
+
+    @include breakpoint-down("xs") {
+        bottom: 40% !important;
+        left: 45% !important;
+    }
+
+    button{
+        @include size(7px !important);
+        background-color: $blackColor !important;
+    }
+}
+
+#myCarousel {
+    position: relative;
+    padding: 25px 0;
+}
+
+#ceo-image {
+    @include size(50%,100%);
+    @include absolute(null,0,0,null);
+
+    img{
+        @include size(100%)
+    }
+    // response
+    @include breakpoint-down("medium") {
+        width: 65%;
+        bottom: -30%;
+    }
+
+    @include breakpoint-down("xs") {
+        width: 100%;
+        bottom: 0;
+        opacity: 0.3;
+        height: fit-content;
+    }
+}
+
+#carouselProducts {
+    height: 400px;
+
+    @include breakpoint-down("small") {
+        height: 450px;
+    }
+
+    @include breakpoint-down("xs") {
+        height: 650px;
+    }
+}
+
+.carousel-control{
+    &-prev,
+    &-next{
+        @include size(100px);
+        @include centerPosition("top");
+        background-color: $bottomHeader !important;
+
+        span{
+            color: $blackColor;
+        }
+    }
+}

@@ -1,0 +1,39 @@
+mixin carouselItem(index)
+	.carousel-item(class= index==1 ? "active" : "")
+		.qoute__block
+			.qoute__img
+				img(src="images/Home15.png", alt="khong co anh")
+			.qoute__text
+				p “Vẫn là vẻ bề ngoài vô cùng đơn giản với các tông màu trắng, hồng làm chủ đạo nhưng lại tạo ra sức hút kỳ lạ với những ai cầm trên tay sản phẩm ấy! Với công nghệ cải tiến mới nhất, hãng Rohto "
+				p.py-3 TUTILE
+					span &emsp;_Giám đốc phát triển sản phẩm
+
+mixin navTabItem
+	#carouselProducts.carousel.slide(data-bs-ride='carousel')
+		.carousel-inner
+			.carousel-item.active
+				.row
+					+responseItem("normal")
+					+responseItem("medium")
+					+responseItem("small")
+					+responseItem("xs")
+			.carousel-item
+				.row
+					+responseItem("normal")
+					+responseItem("medium")
+					+responseItem("small")
+					+responseItem("xs")
+			.carousel-item
+				.row
+					+responseItem("normal")
+					+responseItem("medium")
+					+responseItem("small")
+					+responseItem("xs")
+
+		button.carousel-control-prev.bg-dark(type='button' data-bs-target='#carouselProducts' data-bs-slide='prev')
+			span.carousel-control-prev-icon(aria-hidden='true')
+			span.visually-hidden Previous
+		button.carousel-control-next.bg-dark(type='button' data-bs-target='#carouselProducts' data-bs-slide='next')
+			span.carousel-control-next-icon(aria-hidden='true')
+			span.visually-hidden Next
+			

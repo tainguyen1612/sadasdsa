@@ -1,0 +1,53 @@
+.btn{
+    &-dark {
+        border: unset;
+        border-radius: unset;
+        padding: 5px;
+        margin-top: 10px;
+        font-size: 12px;
+
+        &:hover {
+            background-color: $colorGreen;
+        }
+    }
+
+    &-link {
+        color: $blackColor;
+        font-size: 1.5vw;
+
+        &:hover {
+            color: $colorGreen;
+        }
+        // responsive
+        @include breakpoint-down("xs") {
+            font-size: inherit;
+        }
+    }
+
+    &-outline-dark {
+        @include font(0.8rem,$fontDetault,bold);
+        padding: 5px 10px;
+        margin: 0 2px;
+        border-color: $corlorCorder;
+        border-radius: 10px;
+
+        &:hover {
+            background-color: $colorGreen;
+            border-color: $colorGreen;
+
+            i {
+                color: $whiteColor;
+            }
+        }
+    }
+
+    &-light{
+        @extend .btn-link;
+        font-size: 0.7rem;
+        background-color: unset;
+        border-color: $corlorCorder;
+        border-radius: unset;
+        margin: 5px;
+        padding: 3px;
+    }
+}

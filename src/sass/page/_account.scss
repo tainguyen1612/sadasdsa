@@ -1,0 +1,45 @@
+.account {
+    &__header, &__detail {
+        @include font(1.5rem,$fontDetault,300);
+        padding: 20px 0
+    }
+
+    table, th, td { 
+        @include font(0.85rem,$fontDetault,300);
+		border: 1px solid $corlorCorder !important;
+		border-collapse: collapse;
+		vertical-align: middle;
+		text-align: center;
+        padding: 20px 0;
+
+        th {
+            font-weight: 500;
+        }
+
+        td:nth-child(3) {
+            color: $corlorRed;
+        }
+    }
+
+    &__detail {
+        font-weight: 300;
+        border-bottom: 1px solid $corlorCorder;
+    }
+
+    &__info {
+        margin: 20px 0;
+        line-height: 20px;
+
+        &__name {
+            @include font(1.2rem,$fontDetault,400);
+
+            span {
+                font-size: 0.8rem;
+            }
+        }
+
+        &__address {
+            @include font(0.8rem,$fontDetault,400);
+        }
+    }
+}

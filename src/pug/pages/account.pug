@@ -1,0 +1,44 @@
+extend ../layouts/layout
+
+block vars
+	-title="Account"
+
+block content
+	+navigate(dataPaAccount)
+	section.account.pb-5
+		.container.section__contain
+			.row
+				.col-lg-9.col-12
+					.table-responsive
+						table(align="center").table.caption-top
+							caption.account__header TÀI KHOẢN
+							thread
+								tr.table-secondary
+									each n in tableAccount
+										th(scope="col-2")= n
+							tbody
+								+loop(3)
+									tr
+										each n in tdTable
+											td= n
+								tr
+									each n,i in tdTable
+										if i == 2
+											td Thanh toán 50%
+										else if i == tdTable.length - 1
+											td 275.000đ
+										else
+											td= n
+				.col-lg-3.col-12
+					h1.account__detail CHI TIẾT TÀI KHOẢN
+					.account__info.d-flex
+						i.fa.fa-user.me-3
+						h2.account__info__name GiangLe
+							br
+							span Leanhgiang89@gmail.com
+					.account__info.d-flex
+						i.fa.fa-map-marker-alt.me-3
+						h2.account__info__address Toà nhà Hà Nội group 442 Đội Cấn, Ba Đình, Hà Nội
+					h2.account__info__phone
+						i.fa.fa-phone-volume.me-3
+						| (04) 3786 8904

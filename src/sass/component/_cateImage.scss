@@ -1,0 +1,37 @@
+.categoties__items {
+    @include size(100%);
+    @include flex(space-between,null,wrap);
+    align-content: space-between;
+}
+
+.categoties__image {
+    @include size(49%);
+
+    img {
+        @include size(100%);
+    }
+
+    &:nth-child(2) {
+        position: relative;
+        
+        &::before{
+            content: "";
+            @include size(25px);
+            @include absolute(45%,null,null,-24px);
+            clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+            background-color: $colorYellow;
+        }
+    }
+
+    &:nth-child(3) {
+        position: relative;
+        
+        &::after {
+            content: "";
+            @include size(25px);
+            @include absolute(45%,-24px);
+            clip-path: polygon(0 0, 50% 50%, 0 100%);
+            background-color: $colorBlue;
+        }
+    }
+}

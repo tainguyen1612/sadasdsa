@@ -1,0 +1,16 @@
+mixin itemProducts(image)
+	.categoties__image
+		img(src= image, alt="product item")
+
+mixin itemPro
+	.info__sell__item
+		.info__sell__item__img
+			img(src="images/sellerDetail.png", alt="seller image")
+		.info__sell__item__content
+			h4 Mỹ phẩm châu Âu
+			p 
+				+loop(5)
+					| &hearts;
+				span (5 lượt mua)
+			h5 355.000đ
+			

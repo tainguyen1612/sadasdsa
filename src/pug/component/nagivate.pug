@@ -1,0 +1,10 @@
+mixin navigate(index)
+	section.navigate
+		.container.navigate__contain
+			.row
+				ul.navigate__link
+					each n,i in index
+						li
+							a(href=n.url class= n.url=="/account" ? "navigate__link__red" : null)= n.name
+								if i != index.length-1
+									i.fas.fa-chevron-right

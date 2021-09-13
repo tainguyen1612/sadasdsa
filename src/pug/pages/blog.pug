@@ -1,0 +1,21 @@
+extend ../layouts/layout
+
+block vars
+	-title="Blog"
+
+block content
+	+navigate(nagiBlog)
+	section.blog
+		.container.section__contain
+			.row
+				.col-12
+					h1.login__head BLOG
+				.col-12
+					+pagination()
+				.col-12
+					.row
+						+blogCard(contact[1],"normal")
+						+blogCard(contact[1],"medium")
+						+blogCard(contact[1],"small")
+				.col-12.mt-4
+					+pagination()

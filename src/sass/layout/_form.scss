@@ -1,0 +1,89 @@
+.contact {
+    &__form {
+        padding: 20px 0;
+        text-align: center;
+
+        input {
+            @include size(100%,40px);
+            border: 1px solid $corlorCorder;
+            padding-left: 20px;
+        }
+
+        h5 {
+            @include font(1rem,$fontDetault,400);
+            color: $corlorCorder;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+            border-bottom: 1px solid $bottomHeader;
+
+            span {
+                color: $blackColor
+            }
+        }
+        
+        p {
+            @include font(0.6rem,$fontDetault,300);
+            margin: 15px 0 10px 0;
+            color: $corlorCorder;
+        }
+        
+        button {
+            @include size(80px,30px);
+            margin: 10px 0 20px 0;
+
+            &:focus {
+                box-shadow: unset;
+            }
+        }
+    }
+}
+
+.form {
+    &__head {
+        @include font(1.5rem,$fontDetault,300);
+        margin: 20px 0;
+    }
+
+    &-label {
+        @include font(0.8rem,$fontDetault,500);
+
+        span {
+            color: $colorGreen;
+        }
+    }
+    &-text {
+        color: $corlorRed;
+    }
+    &-control {
+        outline: unset;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.errors {
+    input {
+        border: 1px solid $corlorRed;
+    }
+
+    label {
+        color: $corlorRed;
+    }
+}
+
+.activeClick {
+    color: $colorGreen !important;
+    font-weight: 500 !important;
+};
+
+.actice {
+    a {
+        background-color: $colorGreen;
+        color: black !important;
+    }
+}
+.page-item {
+    cursor: pointer;
+}

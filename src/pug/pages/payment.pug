@@ -1,0 +1,45 @@
+extend ../layouts/layout
+
+block vars
+	-title="Payment"
+
+block content
+	+navigate(regisNagi)
+	+processPayment(3)
+	section.login
+		.container.section__contain
+			.row
+				.col-12.d-flex.justify-content-between.align-items-center
+					h1.login__head THANH TOÁN
+				.col-8
+					form(method="GET" action="#")#formPayment.login__form
+						.mb-4
+							h2.form__head THÔNG TIN CÁ NHÂN
+						.mb-3.form__control
+							label(for="inputName").form-label Họ và tên &#42;
+							input.form-control(type='text' id="inputName" name="fullName" aria-describedby='name')
+							p.form-text
+						.mb-3.form__control
+							label(for="inputEmail").form-label Email &#42;
+							input#inputEmail.form-control(type="text" name="email" aria-describedby='email')
+							p.form-text
+						.mb-3.form__control
+							label(for="inputAddress").form-label Địa chỉ giao hàng &#42;
+							input.form-control(type='text' id="inputAddress" name="address" aria-describedby='address')
+							p.form-text
+						.mb-3.form__control
+							label(for="inputPhone").form-label Số điện thoại &#42;
+							input#inputPhone.form-control(type="text" name="phone" aria-describedby='phone')
+							p.form-text
+						.mb-3.d-flex.align-items-center.justify-content-between
+							a(href="#").btn.btn-dark.mt-0 
+								i.fa.fa-reply
+								|	QUAY LẠI
+							button(type="submit").btn.btn-dark.mt-0 THANH TOÁN
+				.col-4
+					.payment__cart
+						ul
+					.payment__total.d-flex.justify-content-between.align-items-center
+						h2.form__head TỔNG TIỀN
+						h3#total 
+						

@@ -1,0 +1,73 @@
+mixin loop(count)
+	- var n = 0
+	while n < count
+		block
+		- n++
+
+mixin promotionItem
+	each item in promotionItem
+		.col-12.col-sm-4.promotion__item
+			.icon.icon__promotion
+				i(class= item.icon)
+			p= item.desc
+		
+mixin contactItem(item,img)
+	h1.contact__title= item.title
+	if item.title == "VỀ CHÚNG TÔI"
+		article.contact__blog
+			img.contact__blog__logo(src=img, alt="contact image")
+			h3= item.head
+			p= item.content
+			a(href="#") Xem thêm
+	if item.title == "BLOG"
+		article.contact__blog
+			img.contact__blog__img(src=img, alt="contact image")
+			h3= item.head
+			p.contact__blog__content= item.content
+			p 
+				i Bởi NamTran(27/05/2015)
+			a(href="/blogDetail.html") Đọc thêm
+				span 23 bình luận
+
+mixin blogCard(item,size)
+	case size
+		when "normal"
+			each n,i in blogImg
+				.col-lg-4.d-none.d-lg-block
+					if item.title == "BLOG"
+						article.contact__blog
+							img.contact__blog__img(src=n, alt="contact image")
+							h3= item.head
+							p.contact__blog__content= item.content
+							p 
+								i Bởi NamTran(27/05/2015)
+							a(href="/blogDetail.html") Đọc thêm
+								span 23 bình luận
+		when "medium"
+			each n,i in blogImg
+				.col-md-6.d-none.d-md-block.d-lg-none
+					if item.title == "BLOG"
+						article.contact__blog
+							img.contact__blog__img(src=n, alt="contact image")
+							h3= item.head
+							p.contact__blog__content= item.content
+							p 
+								i Bởi NamTran(27/05/2015)
+							a(href="/blogDetail.html") Đọc thêm
+								span 23 bình luận
+				if i == 5
+					- break
+		when "small"
+			each n,i in blogImg
+				.col-12.d-block.d-md-none
+					if item.title == "BLOG"
+						article.contact__blog
+							img.contact__blog__img(src=n, alt="contact image")
+							h3= item.head
+							p.contact__blog__content= item.content
+							p 
+								i Bởi NamTran(27/05/2015)
+							a(href="/blogDetail.html") Đọc thêm
+								span 23 bình luận
+				if i == 2
+					- break

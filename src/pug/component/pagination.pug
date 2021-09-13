@@ -1,0 +1,36 @@
+mixin pagination
+	.list__type
+		.list__type__icon
+			label(for="grid").list__type__check1
+				i.fa.fa-th-large
+			label(for="list").list__type__check2
+				i.fa.fa-list
+			select#sortPrice(name="select")
+				option(value="0" selected="selected") Sort price
+				option(value="1") Min
+				option(value="2") Max
+		nav(aria-label='Page navigation example').list__type__pagina
+			ul.pagination
+				li.page-item
+					a.page-link(aria-label='Previous')
+						span(aria-hidden='true') &laquo;
+				.page__number.d-flex
+					//- li.page-item.page__index
+					//- 	a.page-link 1
+					//- li.page-item.page__index
+					//- 	a.page-link 2
+					//- li.page-item.page__index
+					//- 	a.page-link 3
+				li.page-item
+					a.page-link(aria-label='Next')
+						span(aria-hidden='true') &raquo;
+
+mixin processPayment(index)
+	section
+		.container
+			.row
+				.col-12
+					ul.progressbar
+						li(class= index==1 ? "complete active" : "complete") Add Cart
+						li(class= index==2 ? "complete active" : index==1 ? null : "complete") Update Cart
+						li(class= index==3 ? "complete active" : null) Payment

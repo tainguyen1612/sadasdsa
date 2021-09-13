@@ -1,0 +1,284 @@
+{
+  "product": [
+    {
+      "id": 1,
+      "img": "images/Home17.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm Châu Á",
+      "price": 150000,
+      "quantity": 1
+    },
+    {
+      "id": 2,
+      "img": "images/Home16.jpg",
+      "name": "OHUI",
+      "type": "Mỹ phẩm châu Âu",
+      "price": 530000,
+      "quantity": 1
+    },
+    {
+      "id": 3,
+      "img": "images/Home18.jpg",
+      "name": "HOME",
+      "type": "Mỹ phẩm Châu Á",
+      "price": 200000,
+      "quantity": 1
+    },
+    {
+      "id": 4,
+      "img": "images/Home19.jpg",
+      "name": "DEBORA",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 424000,
+      "quantity": 1
+    },
+    {
+      "id": 5,
+      "img": "images/Home20.jpg",
+      "name": "SARVON",
+      "type": "Mỹ phẩm châu Mỹ",
+      "price": 355000,
+      "quantity": 1
+    },
+    {
+      "id": 6,
+      "img": "images/Home21.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 350000,
+      "quantity": 1
+    },
+    {
+      "id": 7,
+      "img": "images/Home16.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 240000,
+      "quantity": 1
+    },
+    {
+      "id": 8,
+      "img": "images/Home20.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 300000,
+      "quantity": 1
+    },
+    {
+      "id": 9,
+      "img": "images/Home18.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 650000,
+      "quantity": 1
+    },
+    {
+      "id": 10,
+      "img": "images/Home17.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 120000,
+      "quantity": 1
+    },
+    {
+      "id": 11,
+      "img": "images/Home19.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 360000,
+      "quantity": 1
+    },
+    {
+      "id": 12,
+      "img": "images/Home21.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 721000,
+      "quantity": 1
+    },
+    {
+      "id": 13,
+      "img": "images/Home20.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 310000,
+      "quantity": 1
+    },
+    {
+      "id": 14,
+      "img": "images/Home19.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 160000,
+      "quantity": 1
+    },
+    {
+      "id": 15,
+      "img": "images/Home18.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 350000,
+      "quantity": 1
+    },
+    {
+      "id": 16,
+      "img": "images/Home17.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 150000,
+      "quantity": 1
+    },
+    {
+      "id": 17,
+      "img": "images/Home16.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 246000,
+      "quantity": 1
+    },
+    {
+      "id": 18,
+      "img": "images/Home21.jpg",
+      "name": "TIFFANY",
+      "type": "Mỹ phẩm châu Phi",
+      "price": 219000,
+      "quantity": 1
+    }
+  ],
+  "paymentInfo": [
+    {
+      "fullName": "nguyen ngoc tai",
+      "email": "taino846@gmail.com",
+      "address": "12 trung nu vuong",
+      "phone": "0942904405",
+      "product": [
+        {
+          "id": 2,
+          "img": "images/Home16.jpg",
+          "name": "OHUI",
+          "type": "Mỹ phẩm châu Âu",
+          "price": 530000,
+          "quantity": 1
+        }
+      ],
+      "id": 1
+    },
+    {
+      "fullName": "nguyen ngoc tai",
+      "email": "taino846@gmail.com",
+      "address": "12 trung nu vuong",
+      "phone": "0942904405",
+      "product": [
+        {
+          "id": 2,
+          "img": "images/Home16.jpg",
+          "name": "OHUI",
+          "type": "Mỹ phẩm châu Âu",
+          "price": 530000,
+          "quantity": 2
+        },
+        {
+          "id": 1,
+          "img": "images/Home17.jpg",
+          "name": "TIFFANY",
+          "type": "Mỹ phẩm Châu Á",
+          "price": 150000,
+          "quantity": 2
+        }
+      ],
+      "id": 2
+    },
+    {
+      "fullName": "nguyen ngoc tai",
+      "email": "taino846@gmail.com",
+      "address": "12 trung nu vuong",
+      "phone": "0942904405",
+      "product": [
+        {
+          "id": 2,
+          "img": "images/Home16.jpg",
+          "name": "OHUI",
+          "type": "Mỹ phẩm châu Âu",
+          "price": 530000,
+          "quantity": 3
+        },
+        {
+          "id": 1,
+          "img": "images/Home17.jpg",
+          "name": "TIFFANY",
+          "type": "Mỹ phẩm Châu Á",
+          "price": 150000,
+          "quantity": 2
+        },
+        {
+          "id": 3,
+          "img": "images/Home18.jpg",
+          "name": "HOME",
+          "type": "Mỹ phẩm Châu Á",
+          "price": 200000,
+          "quantity": 2
+        }
+      ],
+      "id": 3
+    },
+    {
+      "fullName": "nguyen ngoc tai",
+      "email": "taino846@gmail.com",
+      "address": "12 trung nu vuong",
+      "phone": "0942904405",
+      "product": [
+        {
+          "id": 1,
+          "img": "images/Home17.jpg",
+          "name": "TIFFANY",
+          "type": "Mỹ phẩm Châu Á",
+          "price": 150000,
+          "quantity": 4
+        }
+      ],
+      "id": 4
+    },
+    {
+      "fullName": "nguyen ngoc tai",
+      "email": "taino846@gmail.com",
+      "address": "12 trung nu vuong",
+      "phone": "0942904405",
+      "product": [
+        {
+          "id": 2,
+          "img": "images/Home16.jpg",
+          "name": "OHUI",
+          "type": "Mỹ phẩm châu Âu",
+          "price": 530000,
+          "quantity": 5
+        }
+      ],
+      "id": 5
+    },
+    {
+      "fullName": "nguyen ngoc tai",
+      "email": "taino846@gmail.com",
+      "address": "12 trung nu vuong",
+      "phone": "0942904405",
+      "product": [
+        {
+          "id": 1,
+          "img": "images/Home17.jpg",
+          "name": "TIFFANY",
+          "type": "Mỹ phẩm Châu Á",
+          "price": 150000,
+          "quantity": 2
+        },
+        {
+          "id": 2,
+          "img": "images/Home16.jpg",
+          "name": "OHUI",
+          "type": "Mỹ phẩm châu Âu",
+          "price": 530000,
+          "quantity": 1
+        }
+      ],
+      "id": 6
+    }
+  ]
+}

@@ -1,0 +1,106 @@
+extend ../layouts/layout
+
+block vars
+	-title = 'Mandala'
+
+block content
+	section.banner
+		picture.banner__background
+			source(media="(max-width:1024px) and (min-width:481px)", srcset="images/home-tablet.png")
+			source(media="(max-width:480px)", srcset="images/Home-mobile.png")
+			img(src="images/Home55.jpg", alt="banner image")
+		.banner__infor
+			h1 GreenVera
+			p Sản phẩm tinh dầu dưỡng da 
+				span mới nhất của Mandala  
+			h2 GIÁ CHỈ&emsp;750.000đ
+			button.btn.btn-link MUA HÀNG
+	section.promotion.section.p-0
+		.container
+			.row
+				+promotionItem()
+	section.categoties.section.p-0
+		.container
+			.row
+				.col-md-6.py-1.px-1
+					.categoties__items
+						+itemProducts("images/01_Home.jpg")
+						+itemProducts("images/Home_2.jpg")
+						+itemProducts("images/Home_1.jpg")
+						+itemProducts("images/Home15.jpg")
+				.col-md-6.py-1.px-1.position-relative
+					img(src="images/Home4.jpg" width="100%" alt="khong co anh")
+					.categoties__video
+						i.fa.fa-play
+			.row
+				.col-md-6.py-1.px-1
+					img(src="images/Home6.jpg" width="100%" alt="khong co anh")
+				.col-md-6.py-1.px-1
+					.categoties__items.categoties__items--edit
+						+itemProducts("images/Home_3.jpg")
+						+itemProducts("images/Home7.jpg")
+						+itemProducts("images/Home8.jpg")
+						+itemProducts("images/Home_4.jpg")
+	section.section.qoute
+		.container
+			#myCarousel.carousel.slide(data-bs-ride='carousel')
+				#ceo-image
+					img(src="images/Home14.png", alt="ceo image")
+				.carousel-inner
+					+carouselItem(1)
+					+carouselItem()
+					+carouselItem()
+					.carousel-indicators.qoute__slide
+						button.active(type='button' data-bs-target='#myCarousel' data-bs-slide-to='0' aria-current='true' aria-label='Slide 1')
+						button(type='button' data-bs-target='#myCarousel' data-bs-slide-to='1' aria-label='Slide 2')
+						button(type='button' data-bs-target='#myCarousel' data-bs-slide-to='2' aria-label='Slide 3')
+	section.products
+		.container-fluid
+			.row
+				nav
+					#nav-tab.nav.nav-tabs(role='tablist')
+							button#nav-new-tab.nav-link(data-bs-toggle='tab' data-bs-target='#nav-new' type='button' role='tab' aria-controls="nav-new" aria-selected="false")= navTabCategory[0]
+							button#nav-seller-tab.nav-link.active(data-bs-toggle='tab' data-bs-target='#nav-seller' type='button' role='tab' aria-controls="nav-seller" aria-selected="true")= navTabCategory[1]
+							button#nav-special-tab.nav-link(data-bs-toggle='tab' data-bs-target='#nav-special' type='button' role='tab' aria-controls="nav-special" aria-selected="false")= navTabCategory[2]
+					#nav-tabContent.tab-content
+						#nav-new.tab-pane.fade(role='tabpanel' aria-labelledby='nav-new-tab')
+						#nav-seller.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-seller-tab')
+							+navTab(navTabSubCate,"carousel")
+						#nav-special.tab-pane.fade(role='tabpanel' aria-labelledby='nav-special-tab')
+	section.section.social
+		.container
+			.row.justify-content-center
+				+socailItem("normal")
+				+socailItem("medium")
+				+socailItem("small")
+				+socailItem("xs")
+	section.contact.section
+		.container
+			.row
+				.col-lg-4.col-md-6.col-12
+					+contactItem(contact[0],"images/logo.png")
+				.col-lg-4.col-md-6.col-12
+					+contactItem(contact[1],"images/Home_blog.png")
+				.col-lg-4.col-md-12.col-12.d-lg-block.d-md-flex
+					.contact__box.col-lg-12.col-md-6.col-12.pe-2
+						h1.contact__title= contact[2].title
+						form.contact__form(action="#")
+							input(type="email", name="email", placeholder="Email của bạn")
+							p= contact[2].content
+							button(type="button" data-bs-toggle="modal" data-bs-target="#exampleModal").btn.btn-dark GỬI
+							#exampleModal.modal.fade(tabindex='-1' aria-labelledby='exampleModalLabel' aria-hidden='true')
+								.modal-dialog
+									.modal-content.justify-content-center.align-self-center
+										.modal-header.d-block.p-0.border-0
+											h1#exampleModalLabel.modal-title.text-center GỬI EMAIL
+											button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+										.modal-body
+											p.modal__text Hãy gửi email cua bạn liên hệ với chúng tôi để đc tư vấn tôt nhất
+											p.modal__text Sự hài lòng của bạn là thành công của chúng tôi
+											input.mt-4(type="text" placeholder="Email của bạn ...")
+											.d-block.btn.btn-link.mt-4 GỬI EMAIL
+					.contact__box.col-lg-12.col-md-6.col-12.ps-2
+						h1.contact__title= contact[3].head
+						br
+						each item in contactItem
+							.btn.btn-light= item

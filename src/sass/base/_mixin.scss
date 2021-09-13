@@ -1,0 +1,79 @@
+@mixin size($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin centerPosition($pos) {
+    position: absolute;
+    @if $pos == "both" {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } @else if $pos == "left" {
+        left: 50%;
+        transform: translateX(-50%);
+    } @else if $pos == "top" {
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+@mixin position( $position, $top: null, $right: null, $bottom: null, $left: null) {
+    position: $position;
+    top: $top;
+    right: $right;
+    bottom: $bottom;
+    left: $left;
+}
+
+@mixin absolute($args...) {
+    @include position(absolute, $args...);
+}
+
+@mixin relative($args...) {
+    @include position(relative, $args...);
+}
+
+@mixin fixed($args...) {
+    @include position(fixed, $args...);
+}
+
+@mixin sticky($args...) {
+    @include position(sticky, $args...);
+}
+
+@mixin toRem($size) {
+    font-size: ($size / 16px) * 1rem;
+}
+
+@mixin flex($content: null, $items: null, $wrap: null) {
+    display: flex;
+    flex-direction: row;
+    justify-content: $content;
+    align-items: $items;
+    flex-wrap: $wrap;
+}
+
+@mixin font($size,$family,$weight) {
+    font-size: $size;
+    font-family: $family;
+    font-weight: $weight;
+}
+
+@mixin background($size,$position,$repeat){
+    background-size: $size;
+    background-position: $position;
+    background-repeat: $repeat;
+}
+// responsive 
+@mixin breakpoint-up($size){
+    @media (min-width: map-get($breakpoints-up, $size)){
+      @content;
+    }
+  }
+  
+@mixin breakpoint-down($size){
+  @media (max-width: map-get($breakpoints-down, $size)){
+    @content;
+  }
+}

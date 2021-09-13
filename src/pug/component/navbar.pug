@@ -1,0 +1,36 @@
+mixin listHeader
+	each item in dataHeader
+		if item.url == "/product"
+			li.nav-item.dropdown
+				a#navbarDropdown.nav-link.dropdown-toggle(href=item.url role='button' data-bs-toggle='dropdown' aria-expanded='false')= item.name
+				.dropdown-menu(aria-labelledby="navbarDropdown")
+					+listSubItems(headerSub1)
+					+listSubItems(headerSub2)
+					+listSubItems(headerSub3)
+		else
+			li.nav-item
+				a.nav-link(href=item.url class= (item.url=="/home" ? "active" : ""))= item.name
+
+mixin listSubItems(listItem)
+	ul
+		each items in listItem
+			if items == listItem[0]
+				h1 
+					a(href=items.url)= items.name
+				li
+					hr.dropdown-divider
+			else
+				li
+					a.dropdown-item(href='#')= items
+
+mixin listCart(image,name,price)
+	li.dropdown__cart-item
+		.dropdown__box
+			.dropdown__image
+				img(src= image, alt="khong co anh")
+			.dropdown__content
+				h2= name
+				h3= price
+			.dropdown__icon
+				i.fa.fa-times
+				

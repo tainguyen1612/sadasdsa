@@ -1,0 +1,58 @@
+extend ../layouts/layout
+
+block vars
+	-title = 'Detail Product'
+
+block content
+	+navigate(nagivaItem)
+	section.item
+		.container.item__contain
+			.row
+				.col-lg-6.col-md-12.d-flex.justify-content-between.align-items-center
+					.item__sub.col-2
+						img(src="images/Detail-up.png", alt="detail up" )
+						img(src="images/itemDetail-1.png", alt="detail1" )
+						img(src="images/itemDetail-2.png", alt="detail2" )
+						img(src="images/itemDetail-3.png", alt="detail3" )
+						img(src="images/itemDetail-4.png", alt="detail4" )
+						img(src="images/Detail-down.png", alt="detail down" )
+					.item__main.col-10
+						img(src="images/1_Detail.jpg", alt="main detail" )
+				.col-lg-6.col-md-12
+					article.item__info
+						h1.mb-lg-2= itemInfo.title
+						h4= itemInfo.name
+						h2= itemInfo.price
+							span= itemInfo.mainPrice
+						p.my-3= itemInfo.content
+						h4.item__select MÀU SẮC
+						select(name="color")
+							option(value="default") Màu Bạc
+						h4.item__select SIZE
+						select(name="size")
+							option(value="default") 12
+						h4.item__select SỐ LƯỢNG
+						.item__buy
+							a(href="#").btn.btn-outline-dark MUA HÀNG
+							a(href="#").btn.btn-outline-dark
+								i.fa.fa-heart
+							a(href="#").btn.btn-outline-dark
+								i.fa.fa-sync
+						.item__social.d-flex.align-items-center.justify-content-between
+							p Shipping &amp;
+								span &#09;Returns
+							img(src="images/Detail-social.jpg", alt="social image")
+	section.info
+		.container.info__contain
+			.row
+				.col-lg-9.col-12
+					+navTab(itemTab,"content")
+				.col-lg-3.d-none.d-lg-block
+					.info__sell
+						h1.info__sell__head= detailTitle[0]
+						+loop(3)
+							+itemPro()
+					.info__sell
+						h1.info__sell__head.mt-3= detailTitle[1]
+						+loop(5)
+							+itemPro()

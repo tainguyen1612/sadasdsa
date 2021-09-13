@@ -1,0 +1,25 @@
+.icon {
+    &__header {
+        padding-right: 35px;
+
+        a:hover,&:hover {
+            color: $colorGreen !important;
+        }
+
+        a:focus {
+            color: $colorGreen
+        }
+        // responsive
+        @include breakpoint-down("xs") {
+            padding-right: 10px !important;
+        }
+    }
+
+    &__promotion { 
+        font-size: 1.3rem;
+        // responsive
+        @include breakpoint-down("small") {
+            font-size: 2rem;
+        }
+    }
+}

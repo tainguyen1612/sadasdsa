@@ -1,0 +1,73 @@
+.footer {
+    font-family: $fontDetault;
+    background-color: $blackColor;
+    padding: 50px 0;
+
+    &__contain {
+        max-width: 1150px;
+    }
+
+    &__head {
+        @include font(1rem,$fontDetault,400);
+        color: $whiteColor;
+        margin: 30px 0;
+    }
+
+    &__location {
+        color: $colorFooter;
+        line-height: 30px; 
+
+        li {
+            i {
+                color: $colorGreen;
+                margin-right: 10px;
+            }
+
+            &:nth-child(even){
+                display: inline-block;
+                float: left;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    &__list {
+
+        li {
+            a {
+                color: $colorFooter;
+                font-size: 1rem;
+                line-height: 25px;
+
+                &:hover {
+                    color: $colorGreen;
+
+                    &::before {
+                        content: "\2022";
+                        display: inline-block; 
+                        font-weight: bold; 
+                        width: 1em; 
+                        color: $colorGreen;
+                    }
+                }
+            }
+        }
+    }
+
+    &__copy {
+        margin-top: 50px;
+
+        @include breakpoint-down("medium") {
+            p {
+                margin-bottom: 20px;
+            }
+        }
+    }
+
+    &__bank {
+
+        img {
+            display: initial;
+        }
+    }
+}

@@ -1,0 +1,70 @@
+.login {
+    &__head {
+        @include font(1.7rem,$fontDetault,300);
+        padding: 20px 0;
+    }
+
+    &__form {
+        background-color: $bottomHeader;
+        padding: 30px 50px;
+        margin-bottom: 50px;
+
+        p {
+            @include font(0.8rem,$fontDetault,300);
+        }
+    }
+
+    a {
+        @include font(0.8rem,$fontDetault,300);
+        padding: 5px 20px;
+    }
+}
+
+.payment{
+    &__cart {
+        border-bottom: 1px solid $bottomHeader;
+        li {
+            .dropdown {
+                &__box {
+                    height: 80px;
+                    justify-content: start;
+                }
+
+                &__image{
+                    width: 30%;
+                    img {
+                        height: 100%;
+                        border: 1px solid $bottomHeader;
+                    }
+                }
+
+                &__content {
+                    flex-basis: 80%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-self: center;
+
+                    h3 {
+                        margin: 0;
+                    }
+
+                    p {
+                        display: block !important;
+                        font-weight: 300;
+                        font-size: 0.8rem;
+                        color: $colorText;
+                    }
+                }
+                &__icon {
+                    display: none;
+                }
+
+            }
+        }
+    }
+}
+
+#total {
+    @include font(1rem,$fontLobster,500);
+    color: red;
+}

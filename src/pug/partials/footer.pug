@@ -1,0 +1,40 @@
+footer.footer
+    .container.footer__contain
+        .row
+            .col-lg-4.col-md-12
+                h1.footer__head= dataHeaderFooter[0] 
+                ul.footer__location
+                    each item,n in dataFooter.contact
+                        li
+                            i(class=n)
+                            = item
+            .col-lg-2.col-md-12
+                h1.footer__head= dataHeaderFooter[1]
+                ul.footer__list
+                    each item in dataFooter.shipping
+                        li
+                            a(href="#")= item
+            .col-lg-2.col-md-12
+                h1.footer__head= dataHeaderFooter[2]
+                ul.footer__list
+                    each item in dataFooter.support
+                        li
+                            a(href="#")= item
+            .col-lg-2.col-md-12
+                h1.footer__head= dataHeaderFooter[3]
+                ul.footer__list
+                    each item in dataFooter.info
+                        li
+                            a(href="#")= item
+            .col-lg-2.col-md-12
+                h1.footer__head= dataHeaderFooter[4]
+                ul.footer__list
+                    each item in dataFooter.account
+                        li
+                            a(href="#")= item
+        .row.footer__copy
+            .col-lg-6.col-md-12
+                p.color-dark &#64; Copyright 2008-2014 DKT Technology JSC
+            .col-lg-6.col-md-12.text-lg-end.footer__bank
+                img(src="images/footer-bank.png", alt="footer bank")
+                

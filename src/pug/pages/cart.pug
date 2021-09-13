@@ -1,0 +1,35 @@
+extend ../layouts/layout
+
+block vars
+	-title="Cart"
+
+block content
+	+navigate(dataNaviCart)
+	+processPayment(2)
+	section.cart
+		.container.section__contain
+			.row
+				.col-12
+					.table-responsive
+						table(align="center").table.caption-top
+							caption.cart__header GIỎ HÀNG
+							thread
+								tr.table-secondary
+									each n in tableTr
+										th(scope="col-2")= n
+							tbody#cartInfo
+								+loop(2)
+									tr
+										td
+											img(src="images/cartImg.png", alt="shopping cart")
+										td Lắc tay D&amp;G
+										td.cart__price= count[1]
+											sup đ
+										td
+											input#quantity(type='number' name='quantity' value=++count[0] step='1')
+										td.cart__price= count[1]*count[0]
+											sup đ
+										td
+											a(href="#").fa.fa-trash-alt
+					each n in cartPay
+						a(href="/payment.html").btn.btn-dark.float-end.ms-2.px-3= n

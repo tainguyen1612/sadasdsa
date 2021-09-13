@@ -1,0 +1,344 @@
+@include breakpoint-down("xs") {
+    html {
+        width: fit-content;
+    }
+}
+
+.banner {
+    margin-top: -80px;
+    position: relative;
+    &__background {
+        // responsive
+        img,source {
+            @include breakpoint-down("xs") {
+                max-width: unset !important;
+            }
+        }
+    }
+
+    &__infor {   
+        text-align: center;
+        @include absolute(null,null,4vh,20%);
+
+        h1,h2 {
+            color: $colorGreen;
+        }
+
+        h1 {
+            @include font(6vw,$fontVice,300);
+        }
+
+        p {
+            @include font(1vw,$fontDetault,300);
+            color: $colorText;
+            margin: 10px 0;
+        }
+
+        h2 {
+            @include font(2vw,$fontDetault,300);
+        }
+        // responsive
+        @include breakpoint-down("medium") {
+            bottom: 12%;
+
+            h2 {
+                margin-bottom: 10px;
+            }
+        }
+
+        @include breakpoint-down("small") {
+            bottom: 10%;
+
+            p {
+                margin: 5px 0;
+            }
+
+        }
+
+        @include breakpoint-down("xs") {
+            bottom: 15%;
+            left: 5%;
+            
+            h1 {
+                font-size: 5rem;
+            }
+
+            p {
+                @include font(1rem,null,400);
+            }
+
+            span {
+                display: block;
+            }
+
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.promotion {
+    &__item {
+        text-align: center;
+        padding: 30px 0;
+
+        p {
+            @include font(null,$fontDetault,400);
+            padding: 0 40px;
+            margin-top: 10px;
+            line-height: 1.5rem;
+        }
+
+        &:nth-child(2),
+        &:nth-child(1) {
+            position: relative;
+
+            &::before {
+                content: "";
+                @include absolute(null,0,null,null);
+                @include size(1px,80px);
+                background-color: $corlorCorder;
+            };
+            // responsive
+            @include breakpoint-down("xs") {
+                &::before{
+                    content: unset;
+                }
+            }
+        }
+        // responsive
+        @include breakpoint-down("xs") {
+            @include flex(space-evenly,center);
+            text-align: left;
+            width: 90%;
+            margin: auto;
+            padding: 30px 20px;
+
+            p {
+                flex-basis: 65%;
+                line-height: initial;
+                margin: 0 !important;
+            }
+
+            &:nth-child(2) {
+                border-bottom: 1px solid $colorListItem;
+                border-top: 1px solid $colorListItem;
+            }
+        }
+    }
+}
+
+.categoties {
+    &__video {
+        @include centerPosition("both");
+        @include size(7vw);
+        background-color: $colorVideo;
+        border-radius: 50%;
+        text-align: center;
+
+        i {
+            font-size: 3vw;
+            line-height: 7vw;
+            margin-left: 0.8vw;
+        }
+    }
+
+    &__items--edit {
+
+        .categoties__image {
+
+            &:nth-child(2) {
+                &::before {
+                    background-color: #88d8da;
+                    clip-path: polygon(0 0, 50% 50%, 0 100%);
+                    left: -10px;
+                }
+            }
+        
+            &:nth-child(3) {
+                &::after {
+                    clip-path: polygon(100% 0, 50% 50%, 100% 100%);
+                    background-color: #f49ac2;
+                    right: -10px;
+                }
+            }
+        }
+    }
+}
+
+.qoute {
+    &__block {
+        @include flex();
+        // response
+        @include breakpoint-down("xs"){
+            display: block; 
+            height: 200px;
+        }
+    }
+
+    &__img {
+        @include size(80px);
+        border: 1px solid $colorGreen;
+        border-radius: 50%;
+
+        img {
+            @include size(90%);
+            margin: 4px;
+        }
+        // response
+        @include breakpoint-down("xs") {
+            @include absolute(null,null,0,15%)
+        }
+    }
+
+    &__text {
+        @include font(0.85rem,$fontDetault,300);
+        flex-basis: 60%;
+        line-height: 20px;
+        margin-left: 30px;
+
+        span {
+            color: $corlorCorder;
+            font-style: $fontItalic;
+        }
+        // responsive
+        @include breakpoint-down("medium") {
+            flex-basis: 80%;
+        }
+
+        @include breakpoint-down("xs") {
+            text-align: center;
+            margin-left: unset;
+            font-size: 1rem;
+            width: 90%;
+            margin: auto;
+
+            span {
+                display: block;
+                color: $blackColor;
+            }
+
+            p:nth-child(2) {
+                @include absolute(null,null,5px,35%);
+                text-align: left;
+            }
+            
+        }
+    }
+}
+
+.products {
+    @include background(cover,center,no-repeat);
+    background-image: url(../images/Home-seller.jpg);
+    padding: 50px 0;
+    margin-top: 50px;
+    border-top: 1px solid $corlorCorder;
+}
+
+.social {
+    color: $corlorCorder;
+
+    &__icon {
+        @include flex(center,center);
+
+        i {
+            border: 1px solid $corlorCorder;
+            padding: 10px;
+            border-radius: 50%;
+        }
+
+        p {
+            @include font(0.8rem,$fontItalic,bold);
+            margin-left: 10px;
+        }
+
+        &:hover {
+            color: $blackColor;
+            cursor: pointer;
+             
+            i {
+                border-color: $blackColor;
+            }
+        }
+    }
+}
+
+.contact {
+    max-width: 1150px;
+
+    &__title {
+        @include font(1rem,$fontDetault,bold);
+        position: relative;
+        padding-bottom: 20px;
+        text-align: center;
+
+        &::after {
+            content: "";
+            @include background(cover,center,no-repeat);
+            @include centerPosition("left");
+            @include size(100%,5px);
+            background-image: url(../images/Home-line.png);
+            bottom: 0;
+            // responsive
+            @include breakpoint-down("small") {
+                width: 80%;
+            }
+        }
+    }
+
+    &__blog {
+        line-height: 20px;
+        text-align: justify;
+
+        &__logo{
+            margin: 30px 0;
+        }
+
+        &__content {
+            padding: 10px 0;
+            border-top: 1px solid $bottomHeader;
+            border-bottom: 1px solid $bottomHeader;
+        }
+
+        &__img{
+            margin-top: 30px;
+            
+            @include breakpoint-down("xs"){
+                width: 100%;
+            }
+        }
+
+        h3 {
+            @include font(0.8rem,$fontDetault,bold);
+            margin: 15px 0 5px 0;
+        }
+
+        p {
+            @include font(0.75rem,$fontDetault,300);
+            margin: 5px 0;
+
+            i{
+                font-style: italic;
+                color: $corlorCorder;
+            }
+        }
+
+        a {
+            color: $corlorCorder;
+            font-size: 0.8rem;
+
+            span {
+                float: right;
+            }
+
+            &:hover {
+                color: $blackColor;
+
+                span {
+                    color: $corlorCorder;
+                }
+            }
+        }
+    }
+}

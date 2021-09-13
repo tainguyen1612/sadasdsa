@@ -1,0 +1,44 @@
+extend ../layouts/layout
+
+block vars
+	-title="Register"
+
+block content
+	+navigate(regisNagi)
+	section.login
+		.container.section__contain
+			.row
+				.col-12.d-flex.justify-content-between.align-items-center
+					h1.login__head ĐĂNG KÝ
+				.col-12
+					form.login__form
+						.mb-4
+							h2.form__head THÔNG TIN CÁ NHÂN
+						.mb-3
+							label.form-label Tên trước &#42;
+							input.form-control(type='email' aria-describedby='firstName')
+						.mb-3
+							label.form-label Tên sau &#42;
+							input.form-control(type='email' aria-describedby='lastName')
+						.mb-3
+							label.form-label Địa chỉ email &#42;
+							input.form-control(type='email' aria-describedby='emailHelp')
+						.mb-3
+							label.form-label Password &#42;
+							input.form-control(type='password')
+						.mb-3.form-check
+							input#exampleCheck1.form-check-input.mt-0(type='radio')
+							label.form-label(for='exampleCheck1').mb-0 Đăng ký nhận bảng tin
+						.mb-4
+							h2.form__head THÔNG TIN ĐĂNG NHẬP
+						.mb-3
+							label.form-label Mật khẩu &#42;
+							input.form-control(type='password')
+						.mb-3
+							label.form-label Xác nhận mật khẩu &#42;
+							input.form-control(type='password')
+						.mb-3.d-flex.align-items-center.justify-content-between
+							a(href="#").btn.btn-dark.mt-0 GỬI
+							a(href="#").btn.btn-dark.mt-0 
+								i.fa.fa-reply
+								|	QUAY LẠI

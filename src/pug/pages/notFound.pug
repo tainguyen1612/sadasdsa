@@ -1,0 +1,20 @@
+extend ../layouts/layout
+block vars
+	-title="404 Not Found"
+
+block header
+
+block content
+	section.notfound
+		.container
+			.row.notfound__height.d-flex.justify-content-center.align-items-center
+				.col-md-8
+					img.mx-auto(src="images/Page-404.jpg", alt="404 Not Found")
+					h1 Đây không phải trang web bạn đang tìm kiếm
+					.notfound__search.mx-auto
+						input.form-control(type='text').mb-5
+						i.fa.fa-search
+					a.border-end.border-dark(href="/contact.html") LIÊN HỆ
+					a(href="/index.html") TRANG CHỦ
+
+block footer

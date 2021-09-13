@@ -1,0 +1,235 @@
+.navigate {
+    &__contain{
+        width: 80%;
+        border-bottom: 1px dotted $bottomHeader;
+        // responsive
+        @include breakpoint-down("small") {
+            width: 95%;
+        }
+    }
+    
+    &__link {
+        padding: 10px 0;
+
+        &__red{
+            color: $corlorRed !important;
+        }
+
+        li {
+            display: inline-block;
+
+            a {
+                @include font(0.5rem,$fontDetault,300);
+                color: $colorText;
+                
+                &:hover{
+                    color: $colorGreen;
+                }
+
+                i {
+                    margin-left: 10px;
+                }
+            }
+        }
+    }
+}
+
+.item {
+    &__contain {
+        width: 80%;
+        padding: 50px 0;
+    }
+
+    &__sub {
+        img {
+            margin: auto;
+        }
+    }
+
+    &__main {
+        height: 100%;
+
+        img {
+            height: 100%;
+        }
+    }
+    
+    &__info{
+        text-align: justify;
+        color: $colorText;
+
+        h1 {
+            @include font(1.5rem,$fontDetault,300);
+            line-height: 30px;
+            color: $colorHeader;
+            // response
+            @include breakpoint-down("xs") {
+                margin: 30px 0 10px 0;
+            }
+        }
+
+        p {
+            line-height: 25px;
+        }
+
+        h2 {
+            @include font(1.5rem,$fontTimes,bold);
+            color: $blackColor;
+            margin: 10px 0;
+
+            span {
+                font-size: 1rem;
+                color: $corlorCorder;
+                margin-left: 10px;
+            }
+        } 
+
+        select {
+            @include size(50%,30px);
+            color: $colorText;
+            border-color: $bottomHeader;
+        }
+    }
+
+    &__select {
+        color: $blackColor;
+        margin: 10px 0;
+    }
+
+    &__social {
+        @include font(0.7rem,null,bold);
+        margin: 10px 0;
+
+        span {
+            color: $corlorRed;
+        }
+        // respinsive
+        @include breakpoint-down("xs"){
+            display: block !important;
+        }
+    }
+}
+
+.info {
+    padding-bottom: 50px;
+
+    &__contain {
+        width: 80%;
+        // responsive
+        @include breakpoint-down("xs"){
+            width: 100%
+        }
+    }
+
+    &__tab {
+        @include flex(space-between,null,wrap);
+        color: $colorText;
+
+        &:nth-child(even) {
+
+            .info__tab__content {
+                order: 2;
+                text-align: right;
+                
+                h4 {
+                    &::before {
+                        right: 0;
+                    }
+                }
+            }
+        }
+
+        &:nth-child(odd) {
+            // responsive
+            @include breakpoint-down("xs") {
+                .info__tab__content {
+                    order: 1;
+                }
+            }
+        }
+
+        &__content {
+            width: 60%;
+            padding: 35px 0;
+            
+            h4 {
+                color: $colorFooter;
+                margin-bottom: 5px;
+                position: relative;
+                
+                &::before {
+                    content: "";
+                    @include absolute(null,null,-5px,null);
+                    @include size(80px,1px);
+                    background-color: $corlorCorder;
+                }
+            }
+
+            p {
+                @include font(0.9rem,$fontTimes,300);
+                margin: 20px 0;
+                line-height: 20px;
+            }
+            // responsive   
+            @include breakpoint-down("xs") {
+                flex-basis: 100%;
+                text-align: justify;
+            }
+        }
+
+        &__image {
+            width: 30%;
+
+            img {
+                height: 100%;
+                
+            }
+            // responsive
+            @include breakpoint-down("xs") {
+                flex-basis: 100%;
+            }
+        }
+    }
+
+    &__sell {
+        width: 83%;
+
+        &__head {
+            @include font(0.9rem,$fontDetault,bold);
+            padding: 20.5px 0;
+            border-bottom: 1px solid $corlorCorder;
+        }
+
+        &__item {
+            @include flex(space-between,center);
+            padding: 5px 0;
+            border-bottom: 1px dotted $corlorCorder;
+
+            &__content {
+                line-height: 20px;
+
+                p {
+                    font-size: 0.8rem;
+
+                    span {
+                        color: $colorText;
+                    }
+                }
+
+                h4 {
+                    @include font(0.8rem,$fontItalic,bold)
+                }
+                
+                h5 {
+                    @include font(0.8rem,$fontLobster,bold)
+                }
+            }
+
+            &__img {
+                img {
+                    width: 80%;
+                }
+            }
+        }
+    }
+}

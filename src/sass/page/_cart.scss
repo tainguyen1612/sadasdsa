@@ -1,0 +1,40 @@
+.cart {
+	padding-bottom: 50px;
+
+	&__header {
+		margin: 15px 0;
+		font-size: 1.5rem;
+		font-weight: 300;
+		color: $blackColor;
+	}
+
+	&__price {
+		font-family: $fontLobster !important;
+	}
+
+	table, th, td { 
+		border: 1px solid $corlorCorder !important;
+		border-collapse: collapse;
+		vertical-align: middle;
+		text-align: center;
+		font-family: $fontDetault;
+
+		img {
+			margin: auto;
+		}
+
+		input {
+			@include size(45px,20px);
+			outline: none;
+			border: 1px solid $corlorCorder;
+		}
+
+		a:hover {
+			color: $colorGreen;
+		}
+	}
+}
+
+.price__total {
+	color: red;
+}

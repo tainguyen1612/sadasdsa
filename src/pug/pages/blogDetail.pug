@@ -1,0 +1,64 @@
+extend ../layouts/layout
+
+block vars
+	-title="Blog Detail"
+
+block content
+	+navigate(nagiBlogDetail)
+	section.blogdetail
+		.container.section__contain
+			.row
+				.col-12
+					h1.login__head BLOG
+				.col-lg-3.d-none.d-lg-block
+					.blogdetail__left
+						h2.blogdetail__left__head BÀI VIẾT MỚI NHẤT
+						each n in newBlog
+							.blogdetail__left__new.mb-3
+								.blogdetail__left__new__img
+									img(src=n, alt="new blog")
+								.blogdetail__left__new__content
+									h4 11&#32;
+										span /&#32;tháng 5
+									p Đăng bởi Giangle
+						h2.blogdetail__left__bold BLOG TAG
+						each n,i in contactItem
+							a(href="#").btn.btn-light.ms-0= n
+							if i == 8
+								- break
+						h2.blogdetail__left__bold LATEST VIDEO
+						.blogdetail__left__video.position-relative
+							img(src="images/13_Blog_Detail.jpg", alt="lasted video")
+							i.fa.fa-play
+				.col-lg-9.col-12
+					article.blogdetail__blog
+						img.blogdetail__blog__img(src="images/detailblog.png" width="100%" alt="contact image")
+						h3= dataBlog.title
+						p.blogdetail__blog__content= dataBlog.content
+						h5.mb-4 Bởi NamTran(27/05/2015)
+						a(href="/blogDetail.html") Đọc thêm&#09;&#62;
+							span.d-none.d-lg-block 23 bình luận
+					form.contact__form.text-start.mt-5
+						.mb-4
+							h5 Tag&#32;&#58;
+								span &#09;Men
+						.mb-4
+							h2.border-0.blogdetail__left__head ĐÓNG GÓP Ý KIẾN
+						.mb-3.row
+							label.form-label.col-2 Tên 
+								span &#42;
+							.col-10
+								input.form-control(type='email' aria-describedby='firstName')
+						.mb-3.row
+							label.form-label.col-2 Email 
+								span &#42;
+							.col-10
+								input.form-control(type='email' aria-describedby='lastName')
+						.mb-3.row
+							label.form-label.col-2 Ý kiến 
+								span &#42;
+							.col-10
+								textarea.form-control(type='text' aria-describedby='emailHelp' rows="5")
+						.mb-3.row.justify-content-end
+							.col-10
+								a(href="#").btn.btn-dark.px-3 GỬI Ý KIẾN
